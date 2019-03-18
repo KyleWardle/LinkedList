@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Linked_Lists
 {
-    public partial class Form1 : Form
+    public partial class linked_list_form : Form
     {
-        public Form1()
+        private LinkedList LinkedList = new LinkedList();
+
+        public linked_list_form()
         {
             InitializeComponent();
+        }
+
+        private void btnAppend_Click(object sender, EventArgs e)
+        {
+            LinkedList.Append(Decimal.ToInt32(numAppend.Value));
+            lblLinkedList.Text = LinkedList.ToString();
         }
     }
 }
