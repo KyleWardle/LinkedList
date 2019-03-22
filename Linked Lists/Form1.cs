@@ -19,10 +19,27 @@ namespace Linked_Lists
             InitializeComponent();
         }
 
+        private void UpdateText()
+        {
+            lblLinkedList.Text = LinkedList.ToString();
+        }
+
         private void btnAppend_Click(object sender, EventArgs e)
         {
             LinkedList.Append(Decimal.ToInt32(numAppend.Value));
-            lblLinkedList.Text = LinkedList.ToString();
+            UpdateText();
+        }
+
+        private void btnBubbleSort_Click(object sender, EventArgs e)
+        {
+            LinkedList.BubbleSort();
+            UpdateText();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            LinkedList = new LinkedList();
+            UpdateText();
         }
     }
 }

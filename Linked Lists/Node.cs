@@ -41,7 +41,6 @@ namespace Linked_Lists
             {
                 previous += "]";
                 return previous;
-
             }
         }
 
